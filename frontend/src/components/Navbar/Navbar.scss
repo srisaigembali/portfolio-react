@@ -25,11 +25,15 @@
 
     a {
       text-decoration: none;
-      color: black;
+      color: var(--brown-color);
 
       span {
         color: var(--secondary-color);
       }
+    }
+
+    @media screen and (min-width: 2000px) {
+      font-size: 75px;
     }
   }
 }
@@ -81,6 +85,22 @@
 
       &:hover::after {
         width: 100%;
+      }
+
+      @media screen and (min-width: 2000px) {
+        font-size: 50px;
+        margin: 0 2rem;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 5px;
+          background: var(--secondary-color);
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          transition: 0.4s;
+        }
       }
     }
 
