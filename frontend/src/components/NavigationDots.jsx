@@ -7,10 +7,11 @@ const NavigationDots = ({ active }) => {
         (item, index) => (
           // eslint-disable-next-line jsx-a11y/anchor-has-content
           <a
-            kay={item + index}
+            key={item + index}
             href={`#${item}`}
             className='app__navigation-dot'
             style={active === item ? { backgroundColor: "#313BAC" } : {}}
+            title={item}
           />
         )
       )}
