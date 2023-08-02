@@ -4,7 +4,7 @@ import {
   Footer,
   Header,
   Skills,
-  Testimonials,
+  // Testimonials,
   Work,
 } from "./containers";
 import { Navbar } from "./components";
@@ -18,7 +18,7 @@ const App = () => {
       <About />
       <Work />
       <Skills />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

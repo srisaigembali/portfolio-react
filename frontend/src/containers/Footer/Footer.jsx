@@ -1,50 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
 
 import images from "../../constants/images";
 import MotionWrap from "../../wrapper/MotionWrap";
 import AppWrap from "../../wrapper/AppWrap";
-import { client } from "../../client";
+// import { client } from "../../client";
 import "./Footer.scss";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
+  // const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
-  const { username, email, message } = formData;
+  // const { username, email, message } = formData;
 
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  // const handleChangeInput = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
-  const handleSubmit = () => {
-    setLoading(true);
+  // const handleSubmit = () => {
+  //   setLoading(true);
 
-    const contact = {
-      _type: "contact",
-      grants: [
-        {
-          permissions: ["create", "update", "read"],
-        },
-      ],
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
+  //   const contact = {
+  //     _type: "contact",
+  //     grants: [
+  //       {
+  //         permissions: ["create", "update", "read"],
+  //       },
+  //     ],
+  //     name: formData.username,
+  //     email: formData.email,
+  //     message: formData.message,
+  //   };
 
-    client
-      .create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
-  };
+  //   client
+  //     .create(contact)
+  //     .then(() => {
+  //       setLoading(false);
+  //       setIsFormSubmitted(true);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
 
   return (
     <>
@@ -64,7 +64,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {!isFormSubmitted ? (
+      {/* {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
           <div className='app__flex'>
             <input
@@ -103,7 +103,7 @@ const Footer = () => {
         <div>
           <h3 className='head-text'>Thank you for getting in touch!</h3>
         </div>
-      )}
+      )} */}
     </>
   );
 };
@@ -111,5 +111,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "contact",
-  "app__whitebg"
+  "app__primarybg"
 );
