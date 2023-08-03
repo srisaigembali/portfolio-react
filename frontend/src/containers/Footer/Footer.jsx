@@ -5,6 +5,8 @@ import MotionWrap from "../../wrapper/MotionWrap";
 import AppWrap from "../../wrapper/AppWrap";
 // import { client } from "../../client";
 import "./Footer.scss";
+import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   // const [formData, setFormData] = useState({
@@ -73,6 +75,52 @@ const Footer = () => {
       >
         <button>Download Resume</button>
       </a>
+      <div className='socials'>
+        <div style={{ cursor: "pointer" }} title='linkedin'>
+          <a
+            href='https://www.linkedin.com/in/srisai-gembali-9a4b81205/'
+            target='_blank'
+            rel='noreferrer'
+            style={{ marginTop: "2.5px" }}
+          >
+            <BsLinkedin />
+          </a>
+        </div>
+        <div style={{ cursor: "pointer" }} title='github'>
+          <a
+            href='https://github.com/srisaigembali'
+            target='_blank'
+            rel='noreferrer'
+            style={{ marginTop: "2.5px" }}
+          >
+            <BsGithub />
+          </a>
+        </div>
+        <div style={{ cursor: "pointer" }} title='leetcode'>
+          <a
+            href='https://leetcode.com/srisaigembali/'
+            target='_blank'
+            rel='noreferrer'
+            style={{ marginTop: "2.5px" }}
+          >
+            <SiLeetcode />
+          </a>
+        </div>
+        <div style={{ cursor: "pointer" }} title='leetcode'>
+          <a
+            href='https://auth.geeksforgeeks.org/user/srisaigembali2000/practice'
+            target='_blank'
+            rel='noreferrer'
+            style={{ marginTop: "2.5px" }}
+          >
+            <SiGeeksforgeeks />
+          </a>
+        </div>
+      </div>
+      <div className='copyright'>
+        <p className='p-text'>@2023 SRISAI</p>
+        <p className='p-text'>All rights reserved</p>
+      </div>
       {/* {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
           <div className='app__flex'>
