@@ -40,7 +40,7 @@ const Work = () => {
     <>
       <h2 className='head-text'>
         My Creative
-        <span> Postfolio </span>
+        <span> Portfolio </span>
         Section
       </h2>
       <div className='app__work-filter'>
