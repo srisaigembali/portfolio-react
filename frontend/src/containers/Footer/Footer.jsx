@@ -64,6 +64,15 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <a
+        className='app__resume'
+        href={images.resume}
+        download="Srisai's Resume"
+        target='_blank'
+        rel='noreferrer'
+      >
+        <button>Download Resume</button>
+      </a>
       {/* {!isFormSubmitted ? (
         <div className='app__footer-form app__flex'>
           <div className='app__flex'>
